@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var monk = require('monk');
-var db = monk('mongosh "mongodb+srv://cluster0.ew3zo.mongodb.net/myFirstDatabase" --username root --password root /nodetest1?retryWrites=true&w=majority');
+var db = monk('mongodb+srv://root:root@cluster0.ew3zo.mongodb.net/db_collection_voiture?retryWrites=true&w=majority');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -48,3 +48,6 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+
+// test push
