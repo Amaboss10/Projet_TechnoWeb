@@ -7,6 +7,7 @@
      "annee": "1968",
      "kilometrage": "83 235",
      "color": "Rouge",
+	 "categorie": "Après-guerre",
 	 "description": "Chaîne cinématique : RWD Type de moteur : 340CI V8 Type de carburant : Essence"
 	},
 	{"position": "2",
@@ -17,6 +18,7 @@
      "annee": "1966",
      "kilometrage": "157 028",
      "color": "Rouge",
+	 "categorie": "Après-guerre",
      "description": "Chaîne cinématique : RWD Type de moteur : 396CI V8 Type de carburant : Essence"
 	},
 	{"position": "3",
@@ -27,6 +29,7 @@
      "annee": "1972",
      "kilometrage": "133 123",
      "color": "Verte",
+	 "categorie": "Après-guerre",
      "description": "Chaîne cinématique : RWD Type de moteur : 350ci v8 Type de carburant : Essence"
 	},
 	{"position": "4",
@@ -37,6 +40,7 @@
      "annee": "1971",
      "kilometrage": "52 000",
      "color": "Creme Bamboo",
+	 "categorie": "Après-guerre",
      "description": "Moteur 455 V8, pneus neufs, batterie neuve, échappement double neuf"
 	},
 	{"position": "5",
@@ -47,6 +51,7 @@
      "annee": "1976",
      "kilometrage": "133 575",
      "color": "Blanche",
+	 "categorie": "Youngtimers",
      "description": "C'est une L48, 350 V8, automatique, direction assistée et servofreins, climatisation, né avec correspondance moteur/numéros, roule et roule, principalement peinture d'origine"
 	},
 	{"position": "6",
@@ -57,6 +62,7 @@
      "annee": "1968",
      "kilometrage": "39023",
      "color": "Bleue",
+	 "categorie": "Après-guerre",
      "description": "Moteur : 8 cylindres Transmission : Automatique Transmission : RWD Type de carburant : Essence Engine_displacement : 3923.0CC"
 	},
 	{"position": "7",
@@ -67,6 +73,7 @@
      "annee": "1967",
      "kilometrage": "18325",
      "color": "Blanche",
+	 "categorie": "Après-guerre",
      "description": "Moteur : 8 cylindres Transmission : Automatique Transmission : RWD Type de carburant : Essence Engine_displacement : 429.0CI"
 	},
 	{"position": "8",
@@ -77,6 +84,7 @@
      "annee": "1962",
      "kilometrage": "25207",
      "color": "Blanche",
+	 "categorie": "Après-guerre",
      "description": "La voiture a un moteur V8, un double échappement et une transmission à 4 vitesses"
 	},
 	{"position": "9",
@@ -87,6 +95,7 @@
      "annee": "1961",
      "kilometrage": "18055",
      "color": "Bleu métallisé",
+	 "categorie": "Après-guerre",
      "description": "Il a 390 V-8 avec une transmission automatique C'est l'un des meilleurs originaux pour cette année. La voiture a des caisses métalliques et est chargée d'options. Vitres et serrures électriques et plus"
 	}
 ]
