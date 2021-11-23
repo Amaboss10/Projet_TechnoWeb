@@ -48,3 +48,29 @@
     .table_details{
         text-align: justify;
     }
+
+    .carousel-inner img {
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        width: 1300px;
+        height: 350px;
+      }
+      .container{
+        text-align: justify;
+        justify-content: center;
+      }
+     .quisomme{
+         font-weight:500;
+         color: gray;
+         text-decoration: solid;
+     }
+     .container-ap{
+         margin-top: 50px;
+         margin-bottom: 50px;
+     }
+     .sizer{
+         width: 700px;
+         justify-content: center;
+         margin-bottom: 100px;
+     }
