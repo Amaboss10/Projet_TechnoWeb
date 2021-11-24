@@ -26,12 +26,40 @@
         </button>
         <nav class="collapse navbar-collapse" id="navbar-content">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="#">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link" href="Connexion.html">Connexion</a></li>
-                <li class="nav-item"><a class="nav-link" href="a_propos.html">À propos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link active" href="a_propos.html">À propos</a></li>
             </ul>
         </nav>
+        <button type="button" class="btn btn-primary ms-3" data-bs-toggle="offcanvas" data-bs-target="#userTools">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </svg>
+        </button>
     </header>
+    <section class="offcanvas offcanvas-end" id="userTools">
+        <div class="offcanvas-header">
+            <h2 class="offcanvas-title">Se Connecter</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Nom d'utilisateur</label>
+                    <input type="text" class="form-control" name="username" id="username">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Mot de passe</label>
+                    <input type="password" class="form-control" name="password" id="password">
+                </div>
+                <div class="form-check form-switch mb-3">
+                    <input class="form-check-input" type="checkbox" id="rememberMe" />
+                    <label class="form-check-label" for="rememberMe">Se Souvenir de moi</label>
+                </div>
+                <button class="btn btn-primary">Se Connecter</button>
+            </form>
+        </div>
+    </section>
     <h2 style="padding-left:50px ;color: grey; margin-top: 20px; margin-bottom: 20px;">A propos :</h2>
     <div class="container d-flex justify-content-center mt-50 mb-50">
         <div class="container bg-light">
@@ -89,7 +117,13 @@
         </div>
         </div>
         <footer class="navbar navbar-expand-md navbar-light bg-light px-3">
-            <span class="navbar-text"><h1>AUTO 87<img src="support/logo_index.png" alt="title logo" width="50" height="50" ></h1>Nous contacter :  <a href="https://www.facebook.com/auto87/"><i class='fa fa-facebook-square'></i></a><a href="https://www.twitter.com/auto87/"><i class='fa fa-twitter-square'></i></a></span>
+            <span class="navbar-text">
+                <h1>AUTO 87<img src="support/logo_index.png" alt="title logo" width="50" height="50" ></h1>
+                Nous contacter :  
+                <a href="https://www.facebook.com/auto87/"><i class='fa fa-facebook-square'></i></a>
+                <span>   </span>
+                <a href="https://www.twitter.com/auto87/"><i class='fa fa-twitter-square'></i></a>
+            </span>
         </footer>
 </body>
 </html>
