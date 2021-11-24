@@ -93,3 +93,11 @@
           text-align: right;
           font-size: 20px;
       }
+      .trie_annonces
+      {
+          justify-content: right;
+          width: 500px;
+          padding-left: 220px;
+          margin-bottom: 20px;
+      }
+    
