@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--necessary for the responsive -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../mystyle.css">
+    <link href='//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <title>Administrateur AUTO 87</title>
+</head>
+<body>
+    <header class="navbar navbar-light bg-light px-3">
+        <span class="navbar-text"><h1>AUTO 87<img src="../support/logo_index.png" alt="title logo" width="50" height="50" ></h1>Gestion de l'espace administrateur</span>
+        <div class="servive_logo">
+            <span><img src="../support/logo_services.png" alt="title logo" width="80" height="80" ></span>
+            </div>
+    </header>
+    <div class="retour-nav">
+     <a class="nav-link" href="../admin_index.html">Retour  <i class='fa fa-arrow-circle-right'></i></a>
+    </div>
+     <!-- src = https://codepen.io/Qanser/pen/dVRGJv-->
+    <script>
+        $(document).ready(function() {
+    $("#show_hide_password a").on('click', function(event) {
+        event.preventDefault();
+        if($('#show_hide_password input').attr("type") == "text"){
+            $('#show_hide_password input').attr('type', 'password');
+            $('#show_hide_password i').addClass( "fa-eye-slash" );
+            $('#show_hide_password i').removeClass( "fa-eye" );
+        }else if($('#show_hide_password input').attr("type") == "password"){
+            $('#show_hide_password input').attr('type', 'text');
+            $('#show_hide_password i').removeClass( "fa-eye-slash" );
+            $('#show_hide_password i').addClass( "fa-eye" );
+        }
+    });
+});
+    </script>
+
+    <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <form>
+        <div class="form-group">
+          <label>Mot de passe actuel :</label>
+          <div class="input-group" id="show_hide_password">
+            <input class="form-control" type="password">
+            <div class="input-group-addon">
+                <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <label>Nouveau mot de passe :</label>
+          <div class="input-group" id="show_hide_password">
+            <input class="form-control" type="password">
+            <div class="input-group-addon">
+              <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <label>Confirmer votre mot de passe :</label>
+          <div class="input-group" id="show_hide_password">
+            <input class="form-control" type="password">
+            <div class="input-group-addon">
+              <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary "  data-toggle="modal" data-target="#modalvalider">Confirmer</a>
+        <a href="#" class="btn btn-primary " data-toggle="modal" data-target="#modalannuler">Annuler</a>
+      </form>
+          </div>
+        </div>
+      </div>
+
+      <!--src https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_modal_nofade&stacked=h-->
+
+      <div class="container">
+        <div class="modal fade" id="modalannuler">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Annuler les modifications</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+               Les modifications saisies seront annulées !
+              </div>
+              <div class="modal-footer">  
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="modal fade" id="modalvalider">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Validation des modifications</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+               Les modifications saisies seront enregistrées !
+              </div>
+              <div class="modal-footer">  
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+
+</body>
+</html>
+
