@@ -11,6 +11,19 @@ router.get('/a_propos', function (req, res ){
   res.render('a_propos', {title: '/'});
 })
 
+
+/* GET Page modification Profile*/
+router.get('/modification_profile', function(req, res){
+  var db = req.db;
+  var collection = db.get('collection_admin');
+   collection.find({}, {}, function(e, docs){
+    res.render('modification_profile', {
+      "admin" : docs
+    });
+  });
+});
+
+
 /* GET Page gestion d'annonce*/
 router.get('/gestion_annonce', function(req, res){
   var db = req.db;
