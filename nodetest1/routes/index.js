@@ -11,13 +11,13 @@ router.get('/helloworld', function (req, res ){
   res.render('helloworld', {title: 'Hello, World! '});
 })
 
-/* GET Userlist page*/
-router.get('/userlist', function(req, res){
+/* GET Page Accueil page*/
+router.get('/accueil', function(req, res){
   var db = req.db;
   var collection = db.get('collection_voiture');
    collection.find({}, {}, function(e, docs){
-    res.render('userlist', {
-      "userlist" : docs
+    res.render('accueil', {
+      "voiture" : docs
     });
   });
 });
