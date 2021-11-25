@@ -26,8 +26,9 @@
         </button>
         <nav class="collapse navbar-collapse" id="navbar-content">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link active" href="a_propos.html">À propos</a></li>
+                <li class="nav-item"><a class="nav-link " href="accueil">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link " href="gestion_annonce">Gestion des annonces</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">À propos</a></li>
             </ul>
         </nav>
         <button type="button" class="btn btn-primary ms-3" data-bs-toggle="offcanvas" data-bs-target="#userTools">
@@ -39,24 +40,24 @@
     </header>
     <section class="offcanvas offcanvas-end" id="userTools">
         <div class="offcanvas-header">
-            <h2 class="offcanvas-title">Se Connecter</h2>
+            <h2 class="offcanvas-title">Adminstrateur    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" style="padding-bottom: 5px;" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </svg></h2>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
             <form>
-                <div class="mb-3">
-                    <label for="username" class="form-label">Nom d'utilisateur</label>
-                    <input type="text" class="form-control" name="username" id="username">
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Mot de passe</label>
-                    <input type="password" class="form-control" name="password" id="password">
-                </div>
-                <div class="form-check form-switch mb-3">
-                    <input class="form-check-input" type="checkbox" id="rememberMe" />
-                    <label class="form-check-label" for="rememberMe">Se Souvenir de moi</label>
-                </div>
-                <button class="btn btn-primary">Se Connecter</button>
+                <div class="row">
+                    <div class="col-sm-15">
+                        <div class="single category">
+                            <ul class="list-unstyled">
+                                <li><a href="gestion_profile/modification_profile.html" title="Profile">Profile </a></li>
+                                <li><a href="" title="">Déconnexion </a></li>
+                            </ul>
+                       </div>
+                    </div> 
+                    </div>
             </form>
         </div>
     </section>

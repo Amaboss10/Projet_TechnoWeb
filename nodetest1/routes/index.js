@@ -6,12 +6,24 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-/* Get Hello World page */
-router.get('/helloworld', function (req, res ){
-  res.render('helloworld', {title: 'Hello, World! '});
+/* Get Page A Propos */
+router.get('/a_propos', function (req, res ){
+  res.render('a_propos', {title: '/'});
 })
 
-/* GET Page Accueil page*/
+/* GET Page gestion d'annonce*/
+router.get('/gestion_annonce', function(req, res){
+  var db = req.db;
+  var collection = db.get('collection_voiture');
+   collection.find({}, {}, function(e, docs){
+    res.render('gestion_annonce', {
+      "voiture" : docs
+    });
+  });
+});
+
+
+/* GET Page Accueil*/
 router.get('/accueil', function(req, res){
   var db = req.db;
   var collection = db.get('collection_voiture');
