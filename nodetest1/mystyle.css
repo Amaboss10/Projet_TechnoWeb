@@ -100,4 +100,10 @@
           padding-left: 220px;
           margin-bottom: 20px;
       }
-    
+
+      .container_ajout
+      {
+          justify-content: center;
+          margin-left: 60px;
+          width: 400px;
+      }
