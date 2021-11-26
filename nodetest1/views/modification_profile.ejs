@@ -45,7 +45,7 @@
     <div class="container">
         <div class="row justify-content-center">
           <div class="col-6">
-            <form>
+            <form method="post" action="/modification_profile">
         <div class="form-group">
           <label>Nouveau mot de passe :</label>
           <div class="input-group" id="show_hide_password">
@@ -56,13 +56,13 @@
           </div>
           <label>Confirmer votre mot de passe :</label>
           <div class="input-group" id="show_hide_password">
-            <input class="form-control" type="password">
+            <input name="motdepasse" id="motdepasse" class="form-control" type="password">
             <div class="input-group-addon">
               <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>
-        <a href="#" class="btn btn-primary "  data-toggle="modal" data-target="#modalvalider">Confirmer</a>
+        <button type="submit" class="btn btn-primary "  data-toggle="modal" data-target="#modalvalider">Confirmer</button>
         <a href="#" class="btn btn-primary " data-toggle="modal" data-target="#modalannuler">Annuler</a>
       </form>
           </div>
@@ -83,6 +83,7 @@
                Les modifications saisies seront annulées !
               </div>
               <div class="modal-footer">  
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="javascript:window.location='/accueil'">Redirection Vers l'accueil</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
               </div> 
             </div>
@@ -101,6 +102,7 @@
                Les modifications saisies seront enregistrées !
               </div>
               <div class="modal-footer">  
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="javascript:window.location='/accueil'">Redirection Vers l'accueil</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
               </div> 
             </div>
