@@ -35,6 +35,17 @@ router.get('/gestion_annonce', function(req, res){
   });
 });
 
+/* GET Page details d'annonce*/
+router.get('/details_annonce', function(req, res){
+  var db = req.db;
+  var collection = db.get('collection_voiture');
+   collection.find({}, {}, function(e, docs){
+    res.render('details_annonce', {
+      "voiture" : docs
+    });
+  });
+});
+
 
 /* GET Page Accueil*/
 router.get('/accueil', function(req, res){
