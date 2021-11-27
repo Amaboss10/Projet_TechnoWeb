@@ -43,10 +43,13 @@
     .card_details{
         justify-content: center;
         margin-top: -15px;
+        margin-left: 100px;
         width: 2000px;
     }
+
     .table_details{
         text-align: justify;
+        width: 10px;
     }
 
     .carousel-inner img {

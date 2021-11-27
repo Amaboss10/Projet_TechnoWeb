@@ -1,98 +1,72 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--necessary for the responsive -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="../mystyle.css">
-    <link href='//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'/>
-    <script src="js/bootstrap.bundle.min.js" defer></script>
-    <title>Accueil AUTO 87</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--necessary for the responsive -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="../mystyle.css">
+        <link href='//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        
+        <script src="js/bootstrap.bundle.min.js" defer></script>
+        <title>AUTO 87</title>
+    </head>
 <body>
-    <header class="navbar navbar-expand-md navbar-light bg-light px-3">
-        <span class="navbar-text"><h1>AUTO 87<img src="support/logo_index.png" alt="title logo" width="50" height="50" ></h1>Bienvenue au salon mondial des voitures de collection.</span>
-        <button class="navbar-toggler " data-bs-toggle="collapse" data-bs-target="#navbar-content" >
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <nav class="collapse navbar-collapse" id="navbar-content">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="#">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link " href="gestion_annonce">Gestion des annonces</a></li>
-                <li class="nav-item"><a class="nav-link" href="a_propos">À propos</a></li>
-            </ul>
-        </nav>
-        <button type="button" class="btn btn-primary ms-3" data-bs-toggle="offcanvas" data-bs-target="#userTools">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-              </svg>
-        </button>
+    <header class="navbar navbar-light bg-light px-3">
+        <span class="navbar-text"><h1>AUTO 87<img src="../support/logo_index.png" alt="title logo" width="50" height="50" ></h1>Détails de la <%-locals.voiture.marque%>.</span>
+        <div class="servive_logo">
+            <span><img src="../support/logo_services.png" alt="title logo" width="80" height="80" ></span>
+            </div>
     </header>
-    <section class="offcanvas offcanvas-end" id="userTools">
-        <div class="offcanvas-header">
-            <h2 class="offcanvas-title">Adminstrateur    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" style="padding-bottom: 5px;" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-              </svg></h2>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-        </div>
-        <div class="offcanvas-body">
-            <form>
-                <div class="row">
-                    <div class="col-sm-15">
-                        <div class="single category">
-                            <ul class="list-unstyled">
-                                <li><a href="modification_profile" title="Profile">Profile </a></li>
-                                <li><a href="" title="">Déconnexion </a></li>
-                            </ul>
-                       </div>
-                    </div> 
-                    </div>
-            </form>
-        </div>
-    </section>
-
+    <div class="retour-nav">
+     <a class="nav-link" href="../accueil">Retour  <i class='fa fa-arrow-circle-right'></i></a>
+    </div>
     <main class="container-fluid overflo"></main>
     </main>
-    <section>
-        <div class="row ">
-            <%
-            var list_marque = '';
-            var list_prix = '';
-            var list_img = '';
-            var list_categorie = '';
-            for (i=0; i < voiture.length; i++){ %>
-            <div class="col-md-4 mt-2">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card-img-actions"><img src="<%- voiture[i].image %>" class="card-img img-fluid" width="96" height="350" alt="annonce">
-                        </div>
-                    </div>
-                    <div class="card-body bg-light text-center">
-                        <div class="mb-2">
-                            <!-- Credit Photo - ©2020 Courtesy of RM Sotheby's -->
-                            <!--https://www.autonews.fr/story/story/30-glorieuses/voitures-de-collection-comment-bien-les-preserver-pendant-l-hiver-93469-->
-                            <h6 class="font-weight-semibold mb-2"> <a href="#" class="text-default mb-2" data-abc="true"><%-voiture[i].marque%></a> </h6> <a href="#" class="text-muted" data-abc="true"><%-voiture[i].categorie%></a>
-                        </div>
-                        <h3 class="mb-0 font-weight-semibold"><%-voiture[i].prix%> €</h3>
-                        <a href="details_annonce.ejs" title="detailsAnnonce" ><button type="button" class="btn bg-cart"> Consulter</button></a>
-                        
-                    </div>
-                    
-                </div>
-               
+    <div class="container d-flex justify-content-center mt-50 mb-50">
+            <div class="container bg-light">
+                <table class="table_details">
+                <tr><td><h4 class="mb-2 font-weight-semibold">Marque      : </h4></td> <td><h5><%-locals.voiture.marque%></h5></td></tr>
+                <tr><td><h4 class="mb-2 font-weight-semibold">Prix        : </h4></td><td><h5><%-locals.voiture.prix%>€</h5></td></tr>
+                <tr><td><h4 class="mb-2 font-weight-semibold">modèle      : </h4></td><td><h5><%-locals.voiture.modele%></h5></td></tr>
+                <tr><td><h4 class="mb-2 font-weight-semibold">Année       : </h4></td><td><h5><%-locals.voiture.annee%></h5></td></tr>
+                <tr><td><h4 class="mb-2 font-weight-semibold">Kilométrage : </h4></td><td><h5><%-locals.voiture.kilometrage%></h5></td></tr>
+                <tr><td> <h4 class="mb-2 font-weight-semibold">couleur      : </h4></td><td><h5><%-locals.voiture.color%></h5></td></tr>
+                <tr><td><h4 class="mb-2 font-weight-semibold">Catégorie   : </h4></td><td><h5><%-locals.voiture.categorie%></h5></td></tr>
+                </table>
+                <h4 class="mb-2 font-weight-semibold">Description :</h4><p><%-locals.voiture.description%></p>
+                <button class="btn btn-primary">Commander maintenant <i class="fa fa-shopping-cart " ></i></button>
+                <button class="btn btn-light" data-toggle="modal" data-target="#modalannuler"><i class='fa fa-info-circle'></i></button>
             </div>
-            <%
-            list_marque += '<a href="mailto:' + voiture[i].marque + '">' + voiture[i].marque+ '</a>';
-            list_prix += '<a href="mailto:' + voiture[i].prix + '">' + voiture[i].prix+ '</a>'; 
-            list_img += '<a href="mailto:' + voiture[i].image + '">' + voiture[i].image+ '</a>'; 
-            list_categorie += '<a href="mailto:' + voiture[i].image + '">' + voiture[i].categorie+ '</a>';              
-        }
-        %>  
-        
-</section>
+            <div class="card_details">
+                <div class="card-img-actions"> <img src="<%-locals.voiture.image%>" class="card-img img-fluid" width="96" height="350" alt="annonce"> </div>
+            </div>
+    </div>
+    <div class="container">
+        <div class="modal fade" id="modalannuler">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Plus d'information</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+               En cliquant sur commander vous receverez un ticket de payment qui vous servira pour la livraison de votre commande !
+              </div>
+              <div class="modal-footer">  
+              <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="javascript:window.location='/accueil'">Redirection Vers l'accueil</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
 </body>
 </html>
 

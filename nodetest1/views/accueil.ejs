@@ -71,22 +71,22 @@
                 <div class="row">
                     <div class="col-sm-15">
                         <!-- Category -->
-                        <div class="single category">
+                        <div class="single category" style=" width: 250px;">
                             <h3 class="side-title">Catégories</h3>
                             <ul class="list-unstyled">
-                                <li><a href="categorie_1" title="">Ancêtres ou vétérans (de 1885 à 1900) </a></li>
-                                <li><a href="categorie_2" title="">Edwardians ou Édouardiennes (de 1901 à 1917) </a></li>
-                                <li><a href="categorie_3" title="">Vintage (de 1918 à 1929) </a></li>
-                                <li><a href="categorie_4" title="">Avant-guerre (de 1930 à 1942) </a></li>
-                                <li><a href="categorie_5" title="">Après-guerre (de 1945 à 1974)</a></li>
-                                <li><a href="categorie_6" title="">Youngtimers (à partir de 1975) </a></li>
+                                <li><a href="/categories/categorie_1">Ancêtres ou vétérans (de 1885 à 1900) </a></li>
+                                <li><a href="/categories/categorie_2">Edwardians ou Édouardiennes (de 1901 à 1917) </a></li>
+                                <li><a href="/categories/categorie_3">Vintage (de 1918 à 1929) </a></li>
+                                <li><a href="/categories/categorie_4">Avant-guerre (de 1930 à 1942) </a></li>
+                                <li><a href="/categories/categorie_5">Après-guerre (de 1945 à 1974)</a></li>
+                                <li><a href="/categories/categorie_6" title="">Youngtimers (à partir de 1975) </a></li>
                             </ul>
                         </div>
                     </div> 
                 </div>
         </div>
            
-        <div class="row ">
+        <div class="row">
             <%
             var list_id = '';
             var list_marque = '';
@@ -97,25 +97,20 @@
                 %>
             <div class="col-md-4 mt-2">
                 <div class="card">
-                    <div class="card-body">
-                        <div class="card-img-actions"> <img src="<%- voiture[i].image %>" class="card-img img-fluid" width="96" height="350" alt="annonce"> 
+                        <div class="card-body">
+                            <div class="card-img-actions"> <img src="<%- voiture[i].image %>" class="card-img img-fluid" width="96" height="350" alt="annonce"> 
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-body bg-light text-center">
-                        <div class="mb-2">
-                            <!-- Credit Photo - ©2020 Courtesy of RM Sotheby's -->
-                            <!--https://www.autonews.fr/story/story/30-glorieuses/voitures-de-collection-comment-bien-les-preserver-pendant-l-hiver-93469-->
-                            <h6 class="font-weight-semibold mb-2"> <a href="#" class="text-default mb-2" data-abc="true"><%-voiture[i].marque%></a> </h6> <a href="#" class="text-muted" data-abc="true"><%-voiture[i].categorie%></a>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                    <!-- Credit Photo - ©2020 Courtesy of RM Sotheby's -->
+                                    <!--https://www.autonews.fr/story/story/30-glorieuses/voitures-de-collection-comment-bien-les-preserver-pendant-l-hiver-93469-->
+                                    <h6 class="font-weight-semibold mb-2"> <a href="#" class="text-default mb-2" data-abc="true"><%-voiture[i].marque%></a> </h6> <a href="#" class="text-muted" data-abc="true"><%-voiture[i].categorie%></a>
+                            </div>
+                            <h3 class="mb-0 font-weight-semibold"><%-voiture[i].prix%> €</h3>
+                            <button class="btn bg-cart" value="<%-voiture[i]._id%>" onclick="javascript:window.location='/details_annonce/'+this.value">Consulter</button>   
                         </div>
-                        <h3 class="mb-0 font-weight-semibold"><%-voiture[i].prix%> €</h3>
-                        <form method="get" action="/test">
-                            <input type="hidden" id="_id" name="_id" value="<%-voiture[i]._id%>"> 
-                            <button type="submit" class="btn bg-cart">Consulter</button>
-                        </form>
-                    </div>
-                    
-                </div>
-               
+                </div>   
             </div>
             <%
             list_marque += '<a href="mailto:' + voiture[i].marque + '">' + voiture[i].marque+ '</a>';

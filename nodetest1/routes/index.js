@@ -104,63 +104,64 @@ router.get('/accueil', function(req, res){
 
 
 /////////////////////////////////////// GET CATEGORIES ///////////////////////////////////////////
-
 /* GET Page categorie 1*/
-router.get('/categorie_1', function(req, res){
+router.get('/categories/categorie_1', function(req, res){
   var db = req.db;
   var collection = db.get('collection_voiture');
    collection.find({}, {}, function(e, docs){
-    res.render('categorie_1', {
+    res.render('./categories/categorie_1', {
       "voiture" : docs
     });
   });
 });
+
+
 /* GET Page categorie 2*/
-router.get('/categorie_2', function(req, res){
+router.get('/categories/categorie_2', function(req, res){
   var db = req.db;
   var collection = db.get('collection_voiture');
    collection.find({}, {}, function(e, docs){
-    res.render('categorie_2', {
+    res.render('./categories/categorie_2', {
       "voiture" : docs
     });
   });
 });
 /* GET Page categorie 3*/
-router.get('/categorie_3', function(req, res){
+router.get('/categories/categorie_3', function(req, res){
   var db = req.db;
   var collection = db.get('collection_voiture');
    collection.find({}, {}, function(e, docs){
-    res.render('categorie_3', {
+    res.render('./categories/categorie_3', {
       "voiture" : docs
     });
   });
 });
 /* GET Page categorie 4*/
-router.get('/categorie_4', function(req, res){
+router.get('/categories/categorie_4', function(req, res){
   var db = req.db;
   var collection = db.get('collection_voiture');
    collection.find({}, {}, function(e, docs){
-    res.render('categorie_4', {
+    res.render('./categories/categorie_4', {
       "voiture" : docs
     });
   });
 });
 /* GET Page categorie 5*/
-router.get('/categorie_5', function(req, res){
+router.get('/categories/categorie_5', function(req, res){
   var db = req.db;
   var collection = db.get('collection_voiture');
    collection.find({}, {}, function(e, docs){
-    res.render('categorie_5', {
+    res.render('./categories/categorie_5', {
       "voiture" : docs
     });
   });
 });
 /* GET Page categorie 6*/
-router.get('/categorie_6', function(req, res){
+router.get('/categories/categorie_6', function(req, res){
   var db = req.db;
   var collection = db.get('collection_voiture');
    collection.find({}, {}, function(e, docs){
-    res.render('categorie_6', {
+    res.render('./categories/categorie_6', {
       "voiture" : docs
     });
   });
@@ -191,17 +192,71 @@ router.get('/trie_decroissant', function(req, res){
 });
 
 
-/* TEST*/
-router.get('/test', function(req, res){
+/* GET Page details annonce*/
+router.get('/details_annonce/:id', function(req, res){
   var db = req.db;
-  var _id = req.body._id;
+  console.log(req.params.id);
   var collection = db.get('collection_voiture');
-   collection.find({"_id":_id}, {}, function(e, docs){
-    res.render('test', {
-      "voiture" : docs
-    });
-  });
+  collection.findOne({ _id: req.params.id})
+  .then(data => {
+  res.render('details_annonce', { voiture: data })})
+  .catch(err => res.json(err))
 });
+
+/* GET Page suppression annonce*/
+router.get('/suppression_annonce/:id', function(req, res){
+  var db = req.db;
+  console.log(req.params.id);
+  var collection = db.get('collection_voiture');
+  collection.remove({ _id: req.params.id},{justOne:true})
+  .catch(err => res.json(err))
+  res.redirect('/gestion_annonce')
+});
+
+
+/* GET Page modification annonce*/
+router.get('/modification_annonce/:id', function(req, res){
+  var db = req.db;
+  console.log(req.params.id);
+  var collection = db.get('collection_voiture');
+  collection.findOne({ _id: req.params.id})
+  .then(data => {
+  res.render('modification_annonce', { voiture: data })})
+  .catch(err => res.json(err))
+});
+
+/* POST Page modification d'Annonce 2 */
+
+router.post('/modification_annonce/:id',function(req,res)
+{
+  //set database variables
+  var db=req.db;
+  var marque = req.body.marque;
+  var image = req.body.image;
+  var prix = req.body.prix;
+  var modele = req.body.modele;
+  var annee = req.body.annee;
+  var kilometrage = req.body.kilometrage;
+  var color = req.body.color;
+  var categorie = req.body.categorie;
+  var description = req.body.description;
+  var collection = db.get('collection_voiture');
+  //soumettre au db 
+  collection.update({_id:req.params.id},{$set:
+  {"marque" : marque,
+  "image" : image,
+  "prix" : prix,
+  "modele" : modele,
+  "annee" : annee,
+  "kilometrage" : kilometrage,
+  "color" : color,
+  "categorie" : categorie,
+  "description" : description}
+})
+  .catch(err => res.json(err))
+  res.redirect('/gestion_annonce')
+})
+
 
 
 module.exports = router;

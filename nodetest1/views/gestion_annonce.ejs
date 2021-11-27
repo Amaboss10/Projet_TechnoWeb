@@ -62,8 +62,8 @@
                                 </div>
                             </div>
                         </td>
-                        <td class="text-center"><a class="btn btn-sm btn-outline-primary" href="#">MODIFIER    <i class='fa fa-edit'></i></a></td>
-                        <td class="text-center"><a class="btn btn-sm btn-outline-danger" href="#">SUPPRIMER    <i class='fa fa-trash'></i></a></td>
+                        <td class="text-center"><button class="btn btn-sm btn-outline-primary" value="<%-voiture[i]._id%>" onclick="javascript:window.location='/modification_annonce/'+this.value">MODIFIER    <i class='fa fa-edit'></i></button></td>
+                        <td class="text-center"><button class="btn btn-sm btn-outline-danger" value="<%-voiture[i]._id%>" onclick="javascript:window.location='/suppression_annonce/'+this.value">SUPPRIMER    <i class='fa fa-trash'></i></button></td>
                     </tr>
                 </tbody>
             </table>
