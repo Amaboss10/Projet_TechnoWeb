@@ -1,4 +1,5 @@
 var express = require('express');
+const { id } = require('monk');
 var router = express.Router();
 
 /* GET home page. */
@@ -89,5 +90,107 @@ router.get('/accueil', function(req, res){
     });
   });
 });
+
+
+/////////////////////////////////////// GET CATEGORIES ///////////////////////////////////////////
+
+/* GET Page categorie 1*/
+router.get('/categorie_1', function(req, res){
+  var db = req.db;
+  var collection = db.get('collection_voiture');
+   collection.find({}, {}, function(e, docs){
+    res.render('categorie_1', {
+      "voiture" : docs
+    });
+  });
+});
+/* GET Page categorie 2*/
+router.get('/categorie_2', function(req, res){
+  var db = req.db;
+  var collection = db.get('collection_voiture');
+   collection.find({}, {}, function(e, docs){
+    res.render('categorie_2', {
+      "voiture" : docs
+    });
+  });
+});
+/* GET Page categorie 3*/
+router.get('/categorie_3', function(req, res){
+  var db = req.db;
+  var collection = db.get('collection_voiture');
+   collection.find({}, {}, function(e, docs){
+    res.render('categorie_3', {
+      "voiture" : docs
+    });
+  });
+});
+/* GET Page categorie 4*/
+router.get('/categorie_4', function(req, res){
+  var db = req.db;
+  var collection = db.get('collection_voiture');
+   collection.find({}, {}, function(e, docs){
+    res.render('categorie_4', {
+      "voiture" : docs
+    });
+  });
+});
+/* GET Page categorie 5*/
+router.get('/categorie_5', function(req, res){
+  var db = req.db;
+  var collection = db.get('collection_voiture');
+   collection.find({}, {}, function(e, docs){
+    res.render('categorie_5', {
+      "voiture" : docs
+    });
+  });
+});
+/* GET Page categorie 6*/
+router.get('/categorie_6', function(req, res){
+  var db = req.db;
+  var collection = db.get('collection_voiture');
+   collection.find({}, {}, function(e, docs){
+    res.render('categorie_6', {
+      "voiture" : docs
+    });
+  });
+});
+
+//////////////////////////////////////// TRIE //////////////////////////////////////////////////
+
+/* GET Page trie croissant*/
+router.get('/trie_croissant', function(req, res){
+  var db = req.db;
+  var collection = db.get('collection_voiture');
+   collection.find({}, {}, function(e, docs){
+    res.render('trie_croissant', {
+      "voiture" : docs
+    });
+  });
+});
+
+/* GET Page trie decroissant 6*/
+router.get('/trie_decroissant', function(req, res){
+  var db = req.db;
+  var collection = db.get('collection_voiture');
+   collection.find({}, {}, function(e, docs){
+    res.render('trie_decroissant', {
+      "voiture" : docs
+    });
+  });
+});
+
+
+/* TEST*/
+router.get('/test', function(req, res){
+  var db = req.db;
+  var _id = req.body._id;
+  var collection = db.get('collection_voiture');
+   collection.find({"_id":_id}, {}, function(e, docs){
+    res.render('test', {
+      "voiture" : docs
+    });
+  });
+});
+
 
 module.exports = router;

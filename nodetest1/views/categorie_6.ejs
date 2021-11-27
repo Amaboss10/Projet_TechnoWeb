@@ -18,7 +18,7 @@
         </button>
         <nav class="collapse navbar-collapse" id="navbar-content">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="#">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link active" href="accueil">Accueil</a></li>
                 <li class="nav-item"><a class="nav-link " href="gestion_annonce">Gestion des annonces</a></li>
                 <li class="nav-item"><a class="nav-link" href="a_propos">À propos</a></li>
             </ul>
@@ -65,7 +65,7 @@
                     <select class="form-control">
                             <option value="">Afficher tout</option>
                             <option value="all">Trier par prix décroissant</option>
-                            <option value="selected"><a href="trie_croissant">Trier par prix croissant</a></option>
+                            <option value="selected">Trier par prix croissant</option>
                     </select>
                 </div>
                 <div class="row">
@@ -94,6 +94,8 @@
             var list_img = '';
             var list_categorie = '';
             for (i=0; i < voiture.length; i++){    
+                if(voiture[i].categorie === "Youngtimers")   
+                {
                 %>
             <div class="col-md-4 mt-2">
                 <div class="card">
@@ -124,6 +126,7 @@
             list_categorie += '<a href="mailto:' + voiture[i].image + '">' + voiture[i].categorie+ '</a>';
             list_id += '<a href="mailto:' + voiture[i]._id+ '">' + voiture[i]._id+ '</a>';             
         }
+    }
         %>  
         </div>
        
