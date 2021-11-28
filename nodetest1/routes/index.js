@@ -257,6 +257,16 @@ router.post('/modification_annonce/:id',function(req,res)
   res.redirect('/gestion_annonce')
 })
 
+/* GET Page paiement */
+router.get('/paiement/:id', function(req, res){
+  var db = req.db;
+  console.log(req.params.id);
+  var collection = db.get('collection_voiture');
+  collection.findOne({ _id: req.params.id})
+  .then(data => {
+  res.render('paiement', { voiture: data })})
+  .catch(err => res.json(err))
+});
 
 
 module.exports = router;

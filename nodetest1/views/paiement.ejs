@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--necessary for the responsive -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="../mystyle.css">
+        <link href='//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        
+        <script src="js/bootstrap.bundle.min.js" defer></script>
+        <title>AUTO 87</title>
+    </head>
+<body>
+    <header class="navbar navbar-light bg-light px-3">
+        <span class="navbar-text"><h1>AUTO 87<img src="../support/logo_index.png" alt="title logo" width="50" height="50" ></h1></span>
+        <div class="servive_logo">
+            <span><img src="../support/logo_services.png" alt="title logo" width="80" height="80" ></span>
+            </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-4">
+                <div class="card p-3">
+                    <p class="mb-0 fw-bold h4">Méthode de Paiement</p>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card p-3">
+                    <div class="card-body border p-0">
+                        <p> <a class="btn btn-primary p-2 w-100 h-100 d-flex align-items-center justify-content-between" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample"> <span class="fw-bold">Carte Crédit</span><i class='fa fa-credit-card'></i></a> </p>
+                        <div class="collapse show p-3 pt-0" id="collapseExample">
+                            <div class="row">
+                                <div class="col-lg-5 mb-lg-0 mb-3">
+                                    <p class="h4 mb-0">Sommaire</p>
+                                    <p class="mb-0"><span class="fw-bold">Produit:</span><span class="c-green">: <%-locals.voiture.marque%></span> </p>
+                                    <p class="mb-0"> <span class="fw-bold">Prix:</span> <span class="c-green">:<%-locals.voiture.prix%> euros</span> </p>
+                                </div>
+                                <div class="col-lg-7">
+                                    <form action="" class="form">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form__div"> <input type="text" class="form-control" placeholder=" "> <label for="" class="form__label">Numéro de carte</label> </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form__div"> <input type="text" class="form-control" placeholder=" "> <label for="" class="form__label">MM / yy</label> </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form__div"> <input type="password" class="form-control" placeholder=" "> <label for="" class="form__label">Code CVV</label> </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="btn btn-primary w-100" data-toggle="modal" data-target="#modalannuler">Valider</div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="modal fade" id="modalannuler">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Reçu de paiement</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+               Paiement accepté !
+              </div>
+              <div class="modal-footer">  
+              <button type="button" class="btn btn-success" data-dismiss="modal" onclick="javascript:window.location='/accueil'">Redirection Vers l'accueil</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Fermer</button>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
+

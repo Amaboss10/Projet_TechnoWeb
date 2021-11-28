@@ -47,11 +47,6 @@
         width: 2000px;
     }
 
-    .table_details{
-        text-align: justify;
-        width: 10px;
-    }
-
     .carousel-inner img {
         justify-content: center;
         width: 100%;
@@ -109,4 +104,8 @@
           justify-content: center;
           margin-left: 60px;
           width: 400px;
+      }
+      .details-annonce{
+          background-color: grey;
+          justify-content: center;
       }

@@ -31,7 +31,7 @@
     </main>
     <div class="container d-flex justify-content-center mt-50 mb-50">
             <div class="container bg-light">
-                <table class="table_details">
+                <table>
                 <tr><td><h4 class="mb-2 font-weight-semibold">Marque      : </h4></td> <td><h5><%-locals.voiture.marque%></h5></td></tr>
                 <tr><td><h4 class="mb-2 font-weight-semibold">Prix        : </h4></td><td><h5><%-locals.voiture.prix%>€</h5></td></tr>
                 <tr><td><h4 class="mb-2 font-weight-semibold">modèle      : </h4></td><td><h5><%-locals.voiture.modele%></h5></td></tr>
@@ -40,8 +40,8 @@
                 <tr><td> <h4 class="mb-2 font-weight-semibold">couleur      : </h4></td><td><h5><%-locals.voiture.color%></h5></td></tr>
                 <tr><td><h4 class="mb-2 font-weight-semibold">Catégorie   : </h4></td><td><h5><%-locals.voiture.categorie%></h5></td></tr>
                 </table>
-                <h4 class="mb-2 font-weight-semibold">Description :</h4><p><%-locals.voiture.description%></p>
-                <button class="btn btn-primary">Commander maintenant <i class="fa fa-shopping-cart " ></i></button>
+                <h4 class="mb-2 font-weight-semibold">Déscription :</h4><p><%-locals.voiture.description%></p>
+                <button class="btn btn-primary" value="<%-locals.voiture._id%>" onclick="javascript:window.location='/paiement/'+this.value">Commander maintenant <i class="fa fa-shopping-cart"></i></button>
                 <button class="btn btn-light" data-toggle="modal" data-target="#modalannuler"><i class='fa fa-info-circle'></i></button>
             </div>
             <div class="card_details">
@@ -60,8 +60,8 @@
                En cliquant sur commander vous receverez un ticket de payment qui vous servira pour la livraison de votre commande !
               </div>
               <div class="modal-footer">  
-              <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="javascript:window.location='/accueil'">Redirection Vers l'accueil</button>
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="javascript:window.location='/accueil'">Redirection Vers l'accueil</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
               </div> 
             </div>
           </div>
