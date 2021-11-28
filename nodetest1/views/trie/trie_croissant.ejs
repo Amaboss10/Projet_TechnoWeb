@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--necessary for the responsive -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../mystyle.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../mystyle.css">
     <link href='//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'/>
-    <script src="../js/bootstrap.bundle.min.js" defer></script>
+    <script src="../../js/bootstrap.bundle.min.js" defer></script>
     <title>Accueil AUTO 87</title>
 </head>
 <body>
     <header class="navbar navbar-expand-md navbar-light bg-light px-3">
-        <span class="navbar-text"><h1>AUTO 87<img src="../support/logo_index.png" alt="title logo" width="50" height="50" ></h1>Bienvenue au salon mondial des voitures de collection.</span>
+        <span class="navbar-text"><h1>AUTO 87<img src="../../support/logo_index.png" alt="title logo" width="50" height="50" ></h1>Bienvenue au salon mondial des voitures de collection.</span>
         <button class="navbar-toggler " data-bs-toggle="collapse" data-bs-target="#navbar-content" >
             <span class="navbar-toggler-icon"></span>
         </button>
         <nav class="collapse navbar-collapse" id="navbar-content">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="../accueil">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link " href="../gestion_annonce">Gestion des annonces</a></li>
-                <li class="nav-item"><a class="nav-link" href="../a_propos">À propos</a></li>
+                <li class="nav-item"><a class="nav-link active" href="../../accueil">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link " href="../../gestion_annonce">Gestion des annonces</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../a_propos">À propos</a></li>
             </ul>
         </nav>
         <button type="button" class="btn btn-primary ms-3" data-bs-toggle="offcanvas" data-bs-target="#userTools">
@@ -44,7 +44,7 @@
                     <div class="col-sm-15">
                         <div class="single category">
                             <ul class="list-unstyled">
-                                <li><a href="../modification_profile" title="Profile">Profile </a></li>
+                                <li><a href="../../modification_profile" title="Profile">Profile </a></li>
                                 <li><a href="" title="">Déconnexion </a></li>
                             </ul>
                        </div>
@@ -61,62 +61,67 @@
                         <input type="text" class="form-control" placeholder="Rechercher..."><span class="fornav"><i class="icon-search"></i></span>
                     </div>
                 </form>
+                <div class="toolbar">
+                    <select class="form-control" onchange="location = this.value;">
+                            <option value="">Trier</option>
+                            <option value="trie_decroissant">Trier par prix décroissant</option>
+                            <option value="">Trier par prix croissant</option>
+                            <option value="../../accueil">Afficher tout</option>
+                    </select>
+                </div>
                 <div class="row">
                     <div class="col-sm-15">
                         <!-- Category -->
-                        <div class="single category"  style=" width: 250px;">
+                        <div class="single category" style=" width: 250px;">
                             <h3 class="side-title">Catégories</h3>
                             <ul class="list-unstyled">
-                                <li><a href="categorie_1" title="">Ancêtres ou vétérans (de 1885 à 1900) </a></li>
-                                <li><a href="categorie_2" title="">Edwardians ou Édouardiennes (de 1901 à 1917) </a></li>
-                                <li><a href="categorie_3" title="">Vintage (de 1918 à 1929) </a></li>
-                                <li><a href="categorie_4" title="">Avant-guerre (de 1930 à 1942) </a></li>
-                                <li><a href="categorie_5" title="">Après-guerre (de 1945 à 1974)</a></li>
-                                <li><a href="categorie_6" title="">Youngtimers (à partir de 1975) </a></li>
+                                <li><a href="/categories/categorie_1">Ancêtres ou vétérans (de 1885 à 1900) </a></li>
+                                <li><a href="/categories/categorie_2">Edwardians ou Édouardiennes (de 1901 à 1917) </a></li>
+                                <li><a href="/categories/categorie_3">Vintage (de 1918 à 1929) </a></li>
+                                <li><a href="/categories/categorie_4">Avant-guerre (de 1930 à 1942) </a></li>
+                                <li><a href="/categories/categorie_5">Après-guerre (de 1945 à 1974)</a></li>
+                                <li><a href="/categories/categorie_6" title="">Youngtimers (à partir de 1975) </a></li>
                             </ul>
                         </div>
                     </div> 
                 </div>
         </div>
            
-        <div class="row ">
+        <div class="row">
             <%
             var list_id = '';
             var list_marque = '';
             var list_prix = '';
             var list_img = '';
             var list_categorie = '';
-            for (i=0; i < voiture.length; i++){   
-                if(voiture[i].categorie === "Avant-guerre")   
-                { 
+            var it;
+
+            for (i=0; i < voiture.length; i++){               
                 %>
             <div class="col-md-4 mt-2">
                 <div class="card">
-                    <div class="card-body">
-                        <div class="card-img-actions"> <img src="<%- voiture[i].image %>" class="card-img img-fluid" width="96" height="350" alt="annonce"> 
+                        <div class="card-body">
+                            <div class="card-img-actions"> <img src="<%- voiture[i].image %>" class="card-img img-fluid" width="96" height="350" alt="annonce"> 
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-body bg-light text-center">
-                        <div class="mb-2">
-                            <!-- Credit Photo - ©2020 Courtesy of RM Sotheby's -->
-                            <!--https://www.autonews.fr/story/story/30-glorieuses/voitures-de-collection-comment-bien-les-preserver-pendant-l-hiver-93469-->
-                            <h6 class="font-weight-semibold mb-2"> <a href="#" class="text-default mb-2" data-abc="true"><%-voiture[i].marque%></a> </h6> <a href="#" class="text-muted" data-abc="true"><%-voiture[i].categorie%></a>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                    <!-- Credit Photo - ©2020 Courtesy of RM Sotheby's -->
+                                    <!--https://www.autonews.fr/story/story/30-glorieuses/voitures-de-collection-comment-bien-les-preserver-pendant-l-hiver-93469-->
+                                    <h6 class="font-weight-semibold mb-2"> <a href="#" class="text-default mb-2" data-abc="true"><%-voiture[i].marque%></a> </h6> <a href="#" class="text-muted" data-abc="true"><%-voiture[i].categorie%></a>
+                            </div>
+                            <h3 class="mb-0 font-weight-semibold"><%-voiture[i].prix%> €</h3>
+                            <button class="btn bg-cart" value="<%-voiture[i]._id%>" onclick="javascript:window.location='/details_annonce/'+this.value">Consulter</button> 
                         </div>
-                        <h3 class="mb-0 font-weight-semibold"><%-voiture[i].prix%> €</h3>
-                        <button class="btn bg-cart" value="<%-voiture[i]._id%>" onclick="javascript:window.location='../details_annonce/'+this.value">Consulter</button> 
-                    </div>
-                    
-                </div>
-               
+                </div>   
             </div>
             <%
             list_marque += '<a href="mailto:' + voiture[i].marque + '">' + voiture[i].marque+ '</a>';
             list_prix += '<a href="mailto:' + voiture[i].prix + '">' + voiture[i].prix+ '</a>'; 
             list_img += '<a href="mailto:' + voiture[i].image + '">' + voiture[i].image+ '</a>'; 
             list_categorie += '<a href="mailto:' + voiture[i].image + '">' + voiture[i].categorie+ '</a>';
-            list_id += '<a href="mailto:' + voiture[i]._id+ '">' + voiture[i]._id+ '</a>';             
+            list_id += '<a href="mailto:' + voiture[i]._id+ '">' + voiture[i]._id+ '</a>';         
         }
-    }
         %>  
         </div>
        

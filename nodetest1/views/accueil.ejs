@@ -62,10 +62,11 @@
                     </div>
                 </form>
                 <div class="toolbar">
-                    <select class="form-control">
+                    <select class="form-control" onchange="location = this.value;">
+                            <option value="">Trier</option>
+                            <option value="trie/trie_decroissant">Trier par prix décroissant</option>
+                            <option value="trie/trie_croissant">Trier par prix croissant</option>
                             <option value="">Afficher tout</option>
-                            <option value="all">Trier par prix décroissant</option>
-                            <option value="selected"><a href="trie_croissant">Trier par prix croissant</a></option>
                     </select>
                 </div>
                 <div class="row">
@@ -108,7 +109,7 @@
                                     <h6 class="font-weight-semibold mb-2"> <a href="#" class="text-default mb-2" data-abc="true"><%-voiture[i].marque%></a> </h6> <a href="#" class="text-muted" data-abc="true"><%-voiture[i].categorie%></a>
                             </div>
                             <h3 class="mb-0 font-weight-semibold"><%-voiture[i].prix%> €</h3>
-                            <button class="btn bg-cart" value="<%-voiture[i]._id%>" onclick="javascript:window.location='/details_annonce/'+this.value">Consulter</button>   
+                            <button class="btn bg-cart" value="<%-voiture[i]._id%>" onclick="javascript:window.location='/details_annonce/'+this.value">Consulter</button> 
                         </div>
                 </div>   
             </div>

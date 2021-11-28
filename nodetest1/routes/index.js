@@ -42,7 +42,15 @@ router.post('/ajout_annonce',function(req,res)
   var description = req.body.description;
   var collection = db.get('collection_voiture');
   //soumettre au db 
-  collection.insert({"marque" : marque,"image" : image,"prix" : prix,"modele" : modele,"annee" : annee,"kilometrage" : kilometrage,"color" : color,"categorie" : categorie,"description" : description}) 
+  collection.insert({"marque" : marque,
+  "image" : image,
+  "prix" : prix,
+  "modele" : modele,
+  "annee" : annee,
+  "kilometrage" : kilometrage,
+  "color" : color,
+  "categorie" : categorie,
+  "description" : description}) 
 })
 
 
@@ -169,27 +177,6 @@ router.get('/categories/categorie_6', function(req, res){
 
 //////////////////////////////////////// TRIE //////////////////////////////////////////////////
 
-/* GET Page trie croissant*/
-router.get('/trie_croissant', function(req, res){
-  var db = req.db;
-  var collection = db.get('collection_voiture');
-   collection.find({}, {}, function(e, docs){
-    res.render('trie_croissant', {
-      "voiture" : docs
-    });
-  });
-});
-
-/* GET Page trie decroissant 6*/
-router.get('/trie_decroissant', function(req, res){
-  var db = req.db;
-  var collection = db.get('collection_voiture');
-   collection.find({}, {}, function(e, docs){
-    res.render('trie_decroissant', {
-      "voiture" : docs
-    });
-  });
-});
 
 
 /* GET Page details annonce*/
@@ -266,6 +253,34 @@ router.get('/paiement/:id', function(req, res){
   .then(data => {
   res.render('paiement', { voiture: data })})
   .catch(err => res.json(err))
+});
+
+/* GET Page trie decroissant*/
+router.get('/trie/trie_decroissant', function(req, res){
+  var db = req.db;
+  var collection = db.get('collection_voiture');
+  collection.aggregate(
+    [
+      { $sort : { prix : -1 } }
+    ]
+ )
+  .then(data => {
+    res.render('./trie/trie_decroissant', { voiture: data })})
+    .catch(err => res.json(err))
+});
+
+/* GET Page trie croissant*/
+router.get('/trie/trie_croissant', function(req, res){
+  var db = req.db;
+  var collection = db.get('collection_voiture');
+  collection.aggregate(
+    [
+      { $sort : { prix : 1 } }
+    ]
+ )
+  .then(data => {
+    res.render('./trie/trie_croissant', { voiture: data })})
+    .catch(err => res.json(err))
 });
 
 
