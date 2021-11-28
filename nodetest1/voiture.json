@@ -1,8 +1,8 @@
 [
-	{"position": "1",
+	{
 	 "marque": "DODGE",
 	 "image": "https://images.proxibid.com/AuctionImages/8975/210037/FullSize/14.5-1.jpg",
-	 "prix": "15 025",
+	 "prix": 15025,
 	 "modele": "DART",
      "annee": "1968",
      "kilometrage": "83 235",
@@ -10,10 +10,10 @@
 	 "categorie": "Après-guerre",
 	 "description": "Chaîne cinématique : RWD Type de moteur : 340CI V8 Type de carburant : Essence"
 	},
-	{"position": "2",
+	{
 	 "marque": "Chevrolet",
 	 "image": "https://images.proxibid.com/AuctionImages/8975/210037/FullSize/19.5-1.jpg",
-	 "prix": "8 150",
+	 "prix": 8150,
 	 "modele": "Chevelle",
      "annee": "1966",
      "kilometrage": "157 028",
@@ -21,10 +21,10 @@
 	 "categorie": "Après-guerre",
      "description": "Chaîne cinématique : RWD Type de moteur : 396CI V8 Type de carburant : Essence"
 	},
-	{"position": "3",
+	{
 	 "marque": "Chevrolet",
 	 "image": "https://images.proxibid.com/AuctionImages/8975/210037/FullSize/9.5-1.jpg",
-	 "prix": "15 025",
+	 "prix": 15025,
 	 "modele": "K10 Pickup",
      "annee": "1972",
      "kilometrage": "133 123",
@@ -32,21 +32,21 @@
 	 "categorie": "Après-guerre",
      "description": "Chaîne cinématique : RWD Type de moteur : 350ci v8 Type de carburant : Essence"
 	},
-	{"position": "4",
+	{
 	 "marque": "Buick",
 	 "image": "https://images.proxibid.com/AuctionImages/1530/209797/FullSize/47M.jpg",
-	 "prix": "11 250",
+	 "prix": 11250,
 	 "modele": "Riviera",
      "annee": "1971",
      "kilometrage": "52 000",
      "color": "Creme Bamboo",
-	 "categorie": "Après-guerre",
+	 "categorie": "Avant-guerre",
      "description": "Moteur 455 V8, pneus neufs, batterie neuve, échappement double neuf"
 	},
-	{"position": "5",
+	{
      "marque": "Chevrolet",
 	 "image": "https://images.proxibid.com/AuctionImages/1530/209797/FullSize/56M.jpg",
-	 "prix": "7 750",
+	 "prix": 7750,
 	 "modele": "Corvette",
      "annee": "1976",
      "kilometrage": "133 575",
@@ -54,48 +54,156 @@
 	 "categorie": "Youngtimers",
      "description": "C'est une L48, 350 V8, automatique, direction assistée et servofreins, climatisation, né avec correspondance moteur/numéros, roule et roule, principalement peinture d'origine"
 	},
-	{"position": "6",
+	{
 	 "marque": "Ford",
 	 "image": "https://images.proxibid.com/AuctionImages/11813/210929/FullSize/37-1.jpg",
-	 "prix": "5 500",
+	 "prix": 5500,
 	 "modele": "Country Squire",
      "annee": "1968",
      "kilometrage": "39023",
      "color": "Bleue",
-	 "categorie": "Après-guerre",
+	 "categorie": "Avant-guerre",
      "description": "Moteur : 8 cylindres Transmission : Automatique Transmission : RWD Type de carburant : Essence Engine_displacement : 3923.0CC"
 	},
-	{"position": "7",
+	{
 	 "marque": "Cadillac",
 	 "image": "https://images.proxibid.com/AuctionImages/11813/210929/FullSize/38-1.jpg",
-	 "prix": "9 000",
+	 "prix": 9000,
 	 "modele": "Coup DEVILLE",
      "annee": "1967",
      "kilometrage": "18325",
      "color": "Blanche",
-	 "categorie": "Après-guerre",
+	 "categorie": "Avant-guerre",
      "description": "Moteur : 8 cylindres Transmission : Automatique Transmission : RWD Type de carburant : Essence Engine_displacement : 429.0CI"
 	},
-	{"position": "8",
+	{
 	 "marque": "Studebaker",
 	 "image": "https://images.proxibid.com/AuctionImages/1530/209798/FullSize/2J.jpg",
-	 "prix": "5",
+	 "prix": 5000,
 	 "modele": "4498",
      "annee": "1962",
      "kilometrage": "25207",
      "color": "Blanche",
-	 "categorie": "Après-guerre",
+	 "categorie": "Vintage",
      "description": "La voiture a un moteur V8, un double échappement et une transmission à 4 vitesses"
 	},
-	{"position": "9",
+	{
 	 "marque": "Ford",
 	 "image": "https://images.proxibid.com/AuctionImages/1530/209798/FullSize/5J.jpg",
-	 "prix": "4 900",
+	 "prix": 4900,
 	 "modele": "Thunderbird",
-     "annee": "1961",
+     "annee": "1980",
      "kilometrage": "18055",
      "color": "Bleu métallisé",
-	 "categorie": "Après-guerre",
+	 "categorie": "Youngtimers",
      "description": "Il a 390 V-8 avec une transmission automatique C'est l'un des meilleurs originaux pour cette année. La voiture a des caisses métalliques et est chargée d'options. Vitres et serrures électriques et plus"
+	}
+	,
+	{
+	 "marque": "Mercedes",
+	 "image": "https://images.proxibid.com/AuctionImages/11279/210078/FullSize/5e836786c3b8f3eadc8691bea61ac060b71147e1.jpg",
+	 "prix": 78800,
+	 "modele": "Benz 280SL",
+     "annee": "1920",
+     "kilometrage": "1055",
+     "color": "Violet métallisé",
+	 "categorie": "Youngtimers",
+     "description": "Il est équipé du moteur 6 cylindres en ligne de 2,8 litres et d'une rare transmission manuelle à 4 vitesses."
+	}
+	,
+	{
+	 "marque": "Ferrari",
+	 "image": "https://images.proxibid.com/AuctionImages/11132/208704/FullSize/658928841d2ac656401590c24b1295e998692a8a.jpg",
+	 "prix": 100900,
+	 "modele": "360 Modena Coupe",
+     "annee": "1984",
+     "kilometrage": "45000",
+     "color": "Noire",
+	 "categorie": "Vintage",
+     "description": "Moteur V8 de 3,6 L Transmission F1 avec palettes au volant Extérieur noir métallisé sur intérieur en cuir gris"
+	}
+	,
+	{
+	 "marque": "Porsche",
+	 "image": "https://images.proxibid.com/AuctionImages/11132/208704/FullSize/63a1af2ff867da9b63d40be855a1b7bb4a5e34da.jpg",
+	 "prix": 4900,
+	 "modele": "Porsche 930 Turbo Coupe",
+     "annee": "1994",
+     "kilometrage": "90055",
+     "color": "Noire",
+	 "categorie": "Vintage",
+     "description": "Litre 6 cylindres à plat Moteur turbocompressé Transmission manuelle à 4 vitesses Extérieur noir Schwarz sur intérieur en cuir gris argent"
+	}
+	,
+	{
+	 "marque": "Mercedes",
+	 "image": "https://images.proxibid.com/AuctionImages/1530/209798/FullSize/5J.jpg",
+	 "prix": 79900,
+	 "modele": "Mercedes-Benz 300TD",
+     "annee": "1999",
+     "kilometrage": "18055",
+     "color": "Rouge métallisé",
+	 "categorie": "Edwardians ou Édouardiennes",
+     "description": "Intérieur beige MB-Tex. Le moteur est un 3.0L, 5 cylindres OM617 Turbo Diesel"
+	}
+	,
+	{
+	 "marque": "Mercedes",
+	 "image": "https://images.proxibid.com/AuctionImages/11279/210077/FullSize/cbd10567a0f9bc86487e1b02581bce245da5fae7.jpg",
+	 "prix": 9900,
+	 "modele": "Mercedes-Benz 560SL",
+     "annee": "1990",
+     "kilometrage": "18055",
+     "color": "Grise métallisé",
+	 "categorie": "Edwardians ou Édouardiennes",
+     "description": "équipé d'un V8 de 5,6 litres développant 238 chevaux et 287 lb-pi de couple jumelé à une transmission automatique"
+	}
+	,
+	{
+	 "marque": "Mercedes",
+	 "image": "https://images.proxibid.com/AuctionImages/11279/210077/FullSize/1b0c52d317911a8772ee3357191eeaa7be224c5b.jpg",
+	 "prix": 79900,
+	 "modele": "Mercedes-Benz 380SL",
+     "annee": "1984",
+     "kilometrage": "18055",
+     "color": "Rouge",
+	 "categorie": "Edwardians ou Édouardiennes",
+     "description": "mange un moteur V8, un toit rigide et une capote amovibles, la climatisation, une direction assistée"
+	}
+	,
+	{
+	 "marque": "Mercedes",
+	 "image": "https://images.proxibid.com/AuctionImages/11279/210078/FullSize/6319b6811edc77fcc441377fdd6d41a430a73665.jpg",
+	 "prix": 12900,
+	 "modele": "Mercedes-Benz 450SEL",
+     "annee": "1980",
+     "kilometrage": "98055",
+     "color": "Blanche",
+	 "categorie": "Ancêtres ou vétérans",
+     "description": "mange le V8 de 6,9 ​​litres avec une transmission automatique à trois vitesses"
+	}
+	,
+	{
+	 "marque": "Maserati",
+	 "image": "https://images.proxibid.com/AuctionImages/8229/212492/FullSize/10-1.jpg",
+	 "prix": 84900,
+	 "modele": "Quattroporte",
+     "annee": "2007",
+     "kilometrage": "57055",
+     "color": "Noire",
+	 "categorie": "Ancêtres ou vétérans",
+     "description": "Chaîne cinématique : RWD Type de moteur : V8, 4,2 L Type de carburant : Essence Transmission : Automatique"
+	}
+	,
+	{
+	 "marque": "Porsches",
+	 "image": "https://images.proxibid.com/AuctionImages/11132/208693/FullSize/940934773f4cd2b8f6f262351e20576fa770a7b3.jpg",
+	 "prix": 16900,
+	 "modele": "Boxster Roadster",
+     "annee": "2001",
+     "kilometrage": "20055",
+     "color": "Grise",
+	 "categorie": "Ancêtres ou vétérans",
+     "description": "Moteur 2,7 L 6 cylindres Transmission automatique Extérieur argent sur cuir noir Intérieur électrique Cabriolet à commande électrique Console de toit souple noir Vitres électriques Verrouillage électrique Rétroviseurs électriques Siège conducteur à commande électrique Régulateur de vitesse Climatisation AM/FM CD stéréo seulement 34 402 milles réels propres CarFax Factory Jantes en alliage de 17 po"
 	}
 ]

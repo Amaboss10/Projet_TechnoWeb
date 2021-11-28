@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--necessary for the responsive -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../mystyle.css">
+    <link href='//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <title>Ajout d'annonce AUTO 87</title>
+</head>
+<body>
+    <header class="navbar navbar-light bg-light px-3">
+        <span class="navbar-text"><h1>AUTO 87<img src="../support/logo_index.png" alt="title logo" width="50" height="50" ></h1>Ajout d'une annonce</span>
+        <div class="servive_logo">
+            <span><img src="../support/logo_services.png" alt="title logo" width="80" height="80" ></span>
+            </div>
+    </header>
+    <div class="retour-nav">
+     <a class="nav-link" href="../accueil">Retour  <i class='fa fa-arrow-circle-right'></i></a>
+    </div>
+   <div class="container_ajout">
+    <form method="post" action ="/ajout_annonce">
+       <!-- Marque input -->
+       <div class="form-outline mb-2">
+        <label class="form-label" for="form1Example1">Marque :</label>
+        <input type="text" id="marque" name="marque" class="form-control" />
+      </div>
+      <!-- Image link input -->
+      <div class="form-outline mb-2">
+        <label class="form-label" for="form1Example1">Lien d'image :</label>
+        <input type="text" id="image" name="image" class="form-control" />
+      </div>
+      <!-- Prix input -->
+      <div class="form-outline mb-2">
+        <label class="form-label" for="form1Example1">Prix :</label>
+        <input type="text" id="prix" name="prix" class="form-control" />
+      </div>
+      <!-- Modele input -->
+      <div class="form-outline mb-2">
+        <label class="form-label" for="form1Example1">Modele :</label>
+        <input type="text" id="modele" name="modele" class="form-control" />
+      </div>
+      <!-- Annee input -->
+      <div class="form-outline mb-2">
+        <label class="form-label" for="form1Example1">Année :</label>
+        <input type="text" id="annee" name="annee" class="form-control" />
+      </div>
+      <!-- Kilometrage input -->
+      <div class="form-outline mb-2">
+        <label class="form-label" for="form1Example1">Kilométrage :</label>
+        <input type="text" id="kilometrage" name="kilometrage" class="form-control" />
+      </div>
+      <!-- Couleur input -->
+      <div class="form-outline mb-2">
+        <label class="form-label" for="form1Example1">Couleur :</label>
+        <input type="text" id="color" name="color" class="form-control" />
+      </div>
+      <!-- categorie input -->
+      <div class="form-outline mb-2">
+        <label class="form-label" for="form1Example1">Catégorie :</label>
+        <select name="categorie" id="categorie" class="form-control">
+            <option value="">--Choisir--</option>
+            <option value="Ancêtres ou vétérans">Ancêtres ou vétérans (de 1885 à 1900)</option>
+            <option value="Edwardians ou Édouardiennes">Edwardians ou Édouardiennes (de 1901 à 1917)</option>
+            <option value="Vintage">Vintage (de 1918 à 1929)</option>
+            <option value="Avant-guerre">Avant-guerre (de 1930 à 1942)</option>
+            <option value="Après-guerre">Après-guerre (de 1945 à 1974)</option>
+            <option value="Youngtimers">Youngtimers (à partir de 1975)</option>                           
+        </select>
+      </div>
+      <!-- Description input -->
+      <div class="form-outline mb-3">
+        <label class="form-label" for="form1Example1">Description :</label>
+        <input type="text" id="description" name="description" class="form-control" />
+      </div>
+        <!-- Submit button -->
+        <div class="row">
+            <button type="submit" class="btn btn-primary btn-block mb-2" data-toggle="modal" data-target="#modalvalider">Ajouter</button>
+            <button type="button" class="btn btn-primary btn-outline-danger mb-5" data-toggle="modal" data-target="#modalannuler">Annuler</button>
+        </div>
+        <div class="container">
+            <div class="modal fade" id="modalvalider">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Validation d'Ajout</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                   Votre annonce a été ajouté avec succés !
+                  </div>
+                  <div class="modal-footer">  
+                  <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="javascript:window.location='/accueil'">Redirection Vers l'accueil</button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="javascript:window.location='/gestion_annonce'">Fermer</button>
+                  </div> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="modal fade" id="modalannuler">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Annulation d'Ajout</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                   Votre ajout d'annonce a été annulé !
+                  </div>
+                  <div class="modal-footer">  
+                  <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="javascript:window.location='/accueil'">Redirection Vers l'accueil</button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="javascript:window.location='/gestion_annonce'">Fermer</button>
+                  </div> 
+                </div>
+              </div>
+            </div>
+          </div>
+      </form>
+    </div>
+</body>
+</html>
+

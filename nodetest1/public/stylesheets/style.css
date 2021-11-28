@@ -1,8 +1,103 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+.single {
+  padding: 30px 15px;
+  margin-top: 40px;
+  background: #fcfcfc;
+  border: 1px solid #f0f0f0; }
+  .single h3.side-title {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  font-size: 20px;
+  color: #333;
+  text-transform: uppercase; }
+  .single h3.side-title:after {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background: #ff173c;
+  display: block;
+  margin-top: 6px; }
+  
+  .single ul {
+  margin-bottom: 0; }
+  .single li a {
+  color: #666;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 4px solid #f0f0f0;
+  line-height: 40px;
+  display: block;
+  text-decoration: none; }
+  .single li a:hover {
+  color: #ff173c; }
+  .single li:last-child a {
+  border-bottom: 0; }
+  
+  .form-control{
+     margin-top: 5px;
+     width: 250px;
+     height: 40px;
+     color: gray;
+     border: 1px,solid;
+  }
+  .card_details{
+      justify-content: center;
+      margin-top: -15px;
+      width: 2000px;
+  }
+  .table_details{
+      text-align: justify;
+  }
 
-a {
-  color: #00B7FF;
-}
+  .carousel-inner img {
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      width: 1300px;
+      height: 350px;
+    }
+    .container{
+      text-align: justify;
+      justify-content: center;
+    }
+   .quisomme{
+       font-weight:500;
+       color: gray;
+       text-decoration: solid;
+   }
+   .container-ap{
+       margin-top: 50px;
+       margin-bottom: 50px;
+   }
+   .sizer{
+       width: 700px;
+       justify-content: center;
+       margin-bottom: 100px;
+   }
+   .servive_logo
+   {
+      float: right;
+
+       
+   }
+   a, a:hover{
+      color:#333
+    }
+    .input-group-addon
+    {
+        padding-left: 10px;
+        margin-top: 12px;
+    }
+    .retour-nav
+    {
+        text-align: right;
+        font-size: 20px;
+    }
+    .trie_annonces
+    {
+        justify-content: right;
+        width: 500px;
+        padding-left: 220px;
+        margin-bottom: 20px;
+    }
+  

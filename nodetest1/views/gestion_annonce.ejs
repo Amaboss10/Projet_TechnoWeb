@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--necessary for the responsive -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../mystyle.css">
+    <link href='//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <title>Gestion d'annonce AUTO 87</title>
+</head>
+<body>
+    <header class="navbar navbar-light bg-light px-3">
+        <span class="navbar-text"><h1>AUTO 87<img src="../support/logo_index.png" alt="title logo" width="50" height="50" ></h1>Gestion des annonces</span>
+        <div class="servive_logo">
+            <span><img src="../support/logo_services.png" alt="title logo" width="80" height="80" ></span>
+            </div>
+    </header>
+    <div class="retour-nav">
+     <a class="nav-link" href="../accueil">Retour  <i class='fa fa-arrow-circle-right'></i></a>
+    </div>
+    <div class="trie_annonces">
+        <a href="../ajout_annonce"><button style="width: 280px;" type="button" class="btn btn-success">Ajouter Une Annonce  <i style="width: 10px;" class='fa fa-plus-circle'></i></button></a>
+        <select class="form-control">
+                    <option value="">Afficher tout</option>
+                    <option value="all">Trier par prix décroissant</option>
+                    <option value="selected">Trier par prix croissant</option>
+        </select>
+    </div>
+    
+    <div class="container padding-bottom-3x mb-1">
+        <%
+            var list_marque = '';
+            var list_prix = '';
+            var list_img = '';
+            var list_annee = '';
+            var list_color = '';
+            var list_categorie = '';
+            for (i=0; i < voiture.length; i++){ %>
+        <div class="table-responsive shopping-cart">
+            <table class="table bg-light">
+                <thead>
+                    <tr>
+                        <th colspan="3">PRODUIT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="product-item">
+                                <a class="product-thumb" href="#"><img src="<%- voiture[i].image %>" width="280" height="200" alt="Produit"></a>
+                                <div class="product-info">
+                                    <h4 class="product-title"><a href="#"><%-voiture[i].marque%></a></h4><span>Année: <%-voiture[i].annee%></span><span><br>Couleur: <%-voiture[i].color%></span><span><br>Catégorie: <%-voiture[i].categorie%></span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center"><button class="btn btn-sm btn-outline-primary" value="<%-voiture[i]._id%>" onclick="javascript:window.location='/modification_annonce/'+this.value">MODIFIER    <i class='fa fa-edit'></i></button></td>
+                        <td class="text-center"><button class="btn btn-sm btn-outline-danger" value="<%-voiture[i]._id%>" onclick="javascript:window.location='/suppression_annonce/'+this.value">SUPPRIMER    <i class='fa fa-trash'></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <%
+            list_marque += '<a href="mailto:' + voiture[i].marque + '">' + voiture[i].marque+ '</a>';
+            list_prix += '<a href="mailto:' + voiture[i].prix + '">' + voiture[i].prix+ '</a>'; 
+            list_img += '<a href="mailto:' + voiture[i].image + '">' + voiture[i].image+ '</a>'; 
+            list_annee += '<a href="mailto:' + voiture[i].image + '">' + voiture[i].annee+ '</a>';   
+            list_color += '<a href="mailto:' + voiture[i].image + '">' + voiture[i].color+ '</a>'; 
+            list_categorie += '<a href="mailto:' + voiture[i].image + '">' + voiture[i].categorie+ '</a>';              
+        }
+        %>  
+    </div>
+</body>
+</html>
+

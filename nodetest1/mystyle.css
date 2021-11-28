@@ -35,7 +35,7 @@
     
     .form-control{
        margin-top: 5px;
-       width: 230px;
+       width: 250px;
        height: 40px;
        color: gray;
        border: 1px,solid;
@@ -43,8 +43,69 @@
     .card_details{
         justify-content: center;
         margin-top: -15px;
+        margin-left: 100px;
         width: 2000px;
     }
-    .table_details{
+
+    .carousel-inner img {
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        width: 1300px;
+        height: 350px;
+      }
+      .container{
         text-align: justify;
-    }
+        justify-content: center;
+      }
+     .quisomme{
+         font-weight:500;
+         color: gray;
+         text-decoration: solid;
+     }
+     .container-ap{
+         margin-top: 50px;
+         margin-bottom: 50px;
+     }
+     .sizer{
+         width: 700px;
+         justify-content: center;
+         margin-bottom: 100px;
+     }
+     .servive_logo
+     {
+        float: right;
+
+         
+     }
+     a, a:hover{
+        color:#333
+      }
+      .input-group-addon
+      {
+          padding-left: 10px;
+          margin-top: 12px;
+      }
+      .retour-nav
+      {
+          text-align: right;
+          font-size: 20px;
+      }
+      .trie_annonces
+      {
+          justify-content: right;
+          width: 500px;
+          padding-left: 220px;
+          margin-bottom: 20px;
+      }
+
+      .container_ajout
+      {
+          justify-content: center;
+          margin-left: 60px;
+          width: 400px;
+      }
+      .details-annonce{
+          background-color: grey;
+          justify-content: center;
+      }
